@@ -1,0 +1,4 @@
+DO NOT GIVE UP
+
+-normal textures-
+5px gaussian blur > height to normal

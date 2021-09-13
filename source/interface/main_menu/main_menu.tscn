@@ -1,0 +1,88 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://interface/controls/controls.tscn" type="PackedScene" id=1]
+[ext_resource path="res://interface/styles/label.tres" type="StyleBox" id=2]
+[ext_resource path="res://interface/main_menu/play_button.gd" type="Script" id=3]
+[ext_resource path="res://interface/main_menu/quit_button.gd" type="Script" id=4]
+[ext_resource path="res://interface/fonts/font_regular.tres" type="DynamicFont" id=5]
+[ext_resource path="res://interface/fonts/font_title.tres" type="DynamicFont" id=6]
+[ext_resource path="res://interface/settings/settings.tscn" type="PackedScene" id=7]
+
+[node name="main_menu" type="Spatial"]
+
+[node name="bgm" type="AudioStreamPlayer" parent="."]
+autoplay = true
+
+[node name="title" type="Label" parent="."]
+margin_left = 138.0
+margin_top = 188.0
+margin_right = 446.0
+margin_bottom = 290.0
+custom_styles/normal = ExtResource( 2 )
+custom_fonts/font = ExtResource( 6 )
+text = "umisomn"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="credit" type="Label" parent="."]
+margin_left = 1568.0
+margin_top = 970.0
+margin_right = 1876.0
+margin_bottom = 1035.0
+custom_styles/normal = ExtResource( 2 )
+custom_fonts/font = ExtResource( 5 )
+text = "Ainlid, 2021"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="play_button" type="Button" parent="."]
+margin_left = 138.0
+margin_top = 334.0
+margin_right = 448.0
+margin_bottom = 394.0
+mouse_default_cursor_shape = 2
+custom_fonts/font = ExtResource( 5 )
+text = "play"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="quit_button" type="Button" parent="."]
+margin_left = 138.0
+margin_top = 632.0
+margin_right = 446.0
+margin_bottom = 692.0
+mouse_default_cursor_shape = 2
+custom_fonts/font = ExtResource( 5 )
+text = "quit"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="timer" type="Timer" parent="quit_button"]
+wait_time = 0.5
+one_shot = true
+
+[node name="controls" parent="." instance=ExtResource( 1 )]
+margin_left = 138.0
+margin_top = 436.0
+margin_right = 448.0
+margin_bottom = 502.0
+
+[node name="settings" parent="." instance=ExtResource( 7 )]
+margin_left = 138.0
+margin_top = 544.0
+margin_right = 446.0
+margin_bottom = 596.0
+
+[connection signal="pressed" from="play_button" to="play_button" method="_play_game"]
+[connection signal="pressed" from="quit_button" to="quit_button" method="_quit_pressed"]
+[connection signal="timeout" from="quit_button/timer" to="quit_button" method="_quit_game"]

@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://interface/fonts/font_regular.tres" type="DynamicFont" id=1]
+[ext_resource path="res://interface/controls/controls.gd" type="Script" id=3]
+
+[node name="controls" type="Button"]
+margin_right = 306.0
+margin_bottom = 66.0
+custom_fonts/font = ExtResource( 1 )
+text = "controls"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="popup" type="AcceptDialog" parent="."]
+margin_left = 676.0
+margin_top = 382.0
+margin_right = 1243.0
+margin_bottom = 834.0
+window_title = "controls"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="text" type="Label" parent="popup"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 559.0
+margin_bottom = 416.0
+custom_fonts/font = ExtResource( 1 )
+text = "f11 - toggle fullscreen
+f12 - take a screenshot
+escape - pause
+w/a/s/d - walk
+space - jump
+shift while walking - run"
+__meta__ = {
+"_edit_use_anchors_": false
+}
