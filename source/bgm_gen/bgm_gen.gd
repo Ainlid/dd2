@@ -11,5 +11,6 @@ func _bgm_start():
 		var loop = globals.loops[id]
 		players[n].stream = loop
 		var start_point = globals.dream_rng.randf_range(0.0, loop.get_length())
-		players[n].pitch_scale = globals.dream_rng.randf_range(0.8, 1.2)
+		var rand_note = globals.dream_rng.randi_range(-6, 6)
+		players[n].pitch_scale = pow(2.0, rand_note / 12.0)
 		players[n].play(start_point)

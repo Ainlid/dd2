@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/piano4.wav-4a79472b50e13a87104548a2bd7593f3.sample"
+
+[deps]
+
+source_file="res://loops/piano4.wav"
+dest_files=[ "res://.import/piano4.wav-4a79472b50e13a87104548a2bd7593f3.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

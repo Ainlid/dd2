@@ -1,12 +1,13 @@
 extends Node
 
-const loops = [preload("res://loops/arpeggio1.wav"),
-preload("res://loops/arpeggio2.wav"),
-preload("res://loops/arpeggio3.wav"),
-preload("res://loops/arpeggio4.wav"),
-preload("res://loops/arpeggio5.wav"),
-preload("res://loops/arpeggio6.wav"),
-preload("res://loops/drum1.wav")]
+const loops = [preload("res://loops/piano1.wav"),
+preload("res://loops/piano2.wav"),
+preload("res://loops/piano3.wav"),
+preload("res://loops/piano4.wav"),
+preload("res://loops/piano5.wav"),
+preload("res://loops/piano6.wav"),
+preload("res://loops/piano7.wav"),
+preload("res://loops/piano8.wav")]
 
 const tiles = [preload("res://dream_gen/tiles/flat.tscn"),
 preload("res://dream_gen/tiles/bridge1.tscn"),
@@ -27,9 +28,14 @@ preload("res://materials/tile.tres"),
 preload("res://materials/tree1.tres"),
 preload("res://materials/tree2.tres")]
 
-const textures = [preload("res://textures/field.png"),
-preload("res://textures/city.png"),
-preload("res://textures/bridge.png")]
+const textures = [preload("res://textures/nature1.png"),
+preload("res://textures/nature2.png"),
+preload("res://textures/nature3.png"),
+preload("res://textures/nature4.png"),
+preload("res://textures/nature5.png"),
+preload("res://textures/nature6.png"),
+preload("res://textures/nature7.png"),
+preload("res://textures/nature8.png")]
 
 var dream_rng
 
