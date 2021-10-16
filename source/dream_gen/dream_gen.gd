@@ -75,4 +75,3 @@ func _spawn_player():
 	grid.add_child(new_player)
 	new_player.translation = coords
 	new_player.rotation.y = globals.dream_rng.randi()%4 * PI/2.0
-	new_player.bounds_size = grid_size / 2.0 * tile_distance
