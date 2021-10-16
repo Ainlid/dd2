@@ -1,6 +1,6 @@
 extends Node
 
-const save_path = "user://dreamscape_explorer_save.dat"
+const save_path = "user://dreamsynth.dat"
 
 var save_data = {
 	"volume" : -2.0

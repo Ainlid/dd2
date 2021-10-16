@@ -14,7 +14,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="umisomn"
+config/name="dreamsynth"
 config/description="dream diary"
 run/main_scene="res://interface/main_menu/main_menu.tscn"
 config/icon="res://icon.png"

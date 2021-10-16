@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/synth2.wav-031c752762b524bacedd169490b98857.sample"
+
+[deps]
+
+source_file="res://loops/synth2.wav"
+dest_files=[ "res://.import/synth2.wav-031c752762b524bacedd169490b98857.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

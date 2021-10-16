@@ -7,7 +7,15 @@ preload("res://loops/piano4.wav"),
 preload("res://loops/piano5.wav"),
 preload("res://loops/piano6.wav"),
 preload("res://loops/piano7.wav"),
-preload("res://loops/piano8.wav")]
+preload("res://loops/piano8.wav"),
+preload("res://loops/synth1.wav"),
+preload("res://loops/synth2.wav"),
+preload("res://loops/synth3.wav"),
+preload("res://loops/synth4.wav"),
+preload("res://loops/synth5.wav"),
+preload("res://loops/synth6.wav"),
+preload("res://loops/synth7.wav"),
+preload("res://loops/synth8.wav")]
 
 const tiles = [preload("res://dream_gen/tiles/flat.tscn"),
 preload("res://dream_gen/tiles/bridge1.tscn"),

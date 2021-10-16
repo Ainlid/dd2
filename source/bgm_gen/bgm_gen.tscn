@@ -13,3 +13,7 @@ bus = "bgm"
 
 [node name="player3" type="AudioStreamPlayer" parent="."]
 bus = "bgm"
+
+[node name="timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="timer" to="." method="_timeout"]
