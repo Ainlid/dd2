@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/tree.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/cube_solid.tscn" type="PackedScene" id=2]
+[ext_resource path="res://spawners/player_spawner/player_spawner.tscn" type="PackedScene" id=3]
+[ext_resource path="res://spawners/player_spawner/spawnpoint.tscn" type="PackedScene" id=4]
+
+[node name="forest" type="Spatial"]
+
+[node name="player_spawner" parent="." instance=ExtResource( 3 )]
+points = [ NodePath("spawnpoint"), NodePath("spawnpoint2"), NodePath("spawnpoint3") ]
+
+[node name="spawnpoint" parent="player_spawner" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.02534, 0 )
+
+[node name="spawnpoint2" parent="player_spawner" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.59608, 1.02534, 8.11168 )
+
+[node name="spawnpoint3" parent="player_spawner" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.59608, 7.39345, -11.0917 )
+
+[node name="cube_solid" parent="." instance=ExtResource( 2 )]
+transform = Transform( 100, 0, 0, 0, 1, 0, 0, 0, 100, 0, -1, 0 )
+
+[node name="tree" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.83609, 0, -10.9644 )
+
+[node name="tree2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.2169, 0, -6.08364 )
+
+[node name="tree3" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.68454, 0, 5.82188 )

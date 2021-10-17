@@ -2,14 +2,6 @@ extends Spatial
 
 onready var world_env = $world_env
 onready var sun = $sun
-onready var grid = $grid
-
-var tiles = []
-
-var grid_size = 8
-var tile_distance = 40.0
-
-onready var player = preload("res://player/player.tscn")
 
 func _ready():
 	_generate()
@@ -17,15 +9,8 @@ func _ready():
 func _generate():
 	_set_env()
 	_set_sun()
-	_pick_tiles()
 	_randomize_mats()
-	_spawn_grid()
-	_spawn_player()
-
-func _pick_tiles():
-	for n in 8:
-		var tile_id = globals.dream_rng.randi()%globals.tiles.size()
-		tiles.append(globals.tiles[tile_id])
+	_spawn_layout()
 
 func _randomize_mats():
 	for n in globals.materials.size():
@@ -50,28 +35,7 @@ func _set_sun():
 	sun.rotation.y = globals.dream_rng.randf_range(0.0, PI * 2.0)
 	sun.light_color = Color.from_hsv(globals.dream_rng.randf(), globals.dream_rng.randf(), 1.0)
 
-func _spawn_grid():
-	grid_size = globals.dream_rng.randi_range(1, 4) * 2
-	var offset = -(grid_size - 1.0) / 2.0 * tile_distance
-	grid.translation.x = offset
-	grid.translation.z = offset
-	for n_x in grid_size:
-		for n_z in grid_size:
-			var coords = Vector3.ZERO
-			coords.x = n_x * tile_distance
-			coords.z = n_z * tile_distance
-			var tile_id = globals.dream_rng.randi()%tiles.size()
-			var new_tile = tiles[tile_id].instance()
-			grid.add_child(new_tile)
-			new_tile.translation = coords
-			new_tile.rotation.y = globals.dream_rng.randi()%4 * PI/2.0
-
-func _spawn_player():
-	var coords = Vector3.ZERO
-	coords.x = globals.dream_rng.randi()%grid_size * tile_distance
-	coords.z = globals.dream_rng.randi()%grid_size * tile_distance
-	coords.y = 1.0
-	var new_player = player.instance()
-	grid.add_child(new_player)
-	new_player.translation = coords
-	new_player.rotation.y = globals.dream_rng.randi()%4 * PI/2.0
+func _spawn_layout():
+	var id = globals.dream_rng.randi()%globals.layouts.size()
+	var new_layout = globals.layouts[id].instance()
+	add_child(new_layout)

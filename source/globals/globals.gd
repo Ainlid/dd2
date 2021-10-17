@@ -17,18 +17,14 @@ preload("res://loops/synth6.wav"),
 preload("res://loops/synth7.wav"),
 preload("res://loops/synth8.wav")]
 
-const tiles = [preload("res://dream_gen/tiles/flat.tscn"),
-preload("res://dream_gen/tiles/bridge1.tscn"),
-preload("res://dream_gen/tiles/street1.tscn")]
+const layouts = [preload("res://layouts/forest.tscn")]
 
 var materials = [preload("res://materials/brick.tres"),
 preload("res://materials/concrete.tres"),
-preload("res://materials/floor.tres"),
 preload("res://materials/glass.tres"),
 preload("res://materials/leaves.tres"),
 preload("res://materials/metal.tres"),
 preload("res://materials/rubber.tres"),
-preload("res://materials/tile.tres"),
 preload("res://materials/trunk.tres")]
 
 const textures = [preload("res://textures/nature1.png"),
