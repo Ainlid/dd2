@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sad3.wav-865c7d5f278f5f3d9152f1ec9f0b2c11.sample"
+
+[deps]
+
+source_file="res://loops/sad3.wav"
+dest_files=[ "res://.import/sad3.wav-865c7d5f278f5f3d9152f1ec9f0b2c11.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0
