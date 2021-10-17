@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/tree.tscn" type="PackedScene" id=1]
+
+[node name="tree_patch" type="Spatial"]
+
+[node name="tree" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.79578, 0, 0.605586, 0, 1, 0, -0.605586, 0, 0.79578, 3.91841, 0, -4.69623 )
+
+[node name="tree4" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.713972, 0, 0.700175, 0, 1, 0, -0.700175, 0, -0.713972, 8.00307, 0, 2.4069 )
+
+[node name="tree5" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.510723, 0, -0.859745, 0, 0.9, 0, 0.859745, 0, -0.510723, 8.19699, 0, -8.01388 )
+
+[node name="tree6" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.510723, 0, -0.859745, 0, 1, 0, 0.859745, 0, -0.510723, -6.82194, 1.90735e-06, 6.91779 )
+
+[node name="tree2" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.324957, 0, -0.945729, 0, 1.2, 0, 0.945729, 0, 0.324957, -5.258, 0, -6.084 )
+
+[node name="tree3" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1.09855, 0.0513773, 0, -0.056515, 0.998679, 0.304041, 0, 8.3868 )

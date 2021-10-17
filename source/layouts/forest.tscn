@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://assets/tree.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/tree_patch.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/cube_solid.tscn" type="PackedScene" id=2]
 [ext_resource path="res://spawners/player_spawner/player_spawner.tscn" type="PackedScene" id=3]
 [ext_resource path="res://spawners/player_spawner/spawnpoint.tscn" type="PackedScene" id=4]
+[ext_resource path="res://materials/grass.tres" type="Material" id=5]
 
 [node name="forest" type="Spatial"]
 
@@ -17,16 +18,31 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.02534, 0 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.59608, 1.02534, 8.11168 )
 
 [node name="spawnpoint3" parent="player_spawner" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.59608, 7.39345, -11.0917 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.68346, 6.76759, -7.98211 )
 
-[node name="cube_solid" parent="." instance=ExtResource( 2 )]
-transform = Transform( 100, 0, 0, 0, 1, 0, 0, 0, 100, 0, -1, 0 )
+[node name="ground" parent="." instance=ExtResource( 2 )]
+transform = Transform( 50, 0, 0, 0, 1, 0, 0, 0, 50, 0, -1, 0 )
+material/0 = ExtResource( 5 )
 
-[node name="tree" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.83609, 0, -10.9644 )
+[node name="tree_patch" parent="." instance=ExtResource( 1 )]
 
-[node name="tree2" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.2169, 0, -6.08364 )
+[node name="tree_patch2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.436692, 0, -0.899611, 0, 1, 0, 0.899611, 0, 0.436692, 0, 0, -23.9033 )
 
-[node name="tree3" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.68454, 0, 5.82188 )
+[node name="tree_patch3" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.70076, 0, -0.713397, 0, 1, 0, 0.713397, 0, -0.70076, 24.1452, 0, -5.82053 )
+
+[node name="tree_patch4" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.978846, 0, -0.204599, 0, 1, 0, 0.204599, 0, 0.978846, -8.98932, 3.8147e-06, 22.2067 )
+
+[node name="tree_patch7" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.304848, 0, -0.952401, 0, 1, 0, 0.952401, 0, 0.304848, 11.3587, 3.8147e-06, 33.5549 )
+
+[node name="tree_patch8" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.670336, 0, 0.742058, 0, 1, 0, -0.742058, 0, 0.670336, 29.6502, 3.8147e-06, 20.8968 )
+
+[node name="tree_patch5" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.495125, 0, 0.868822, 0, 1, 0, -0.868822, 0, -0.495125, -20.2546, 3.8147e-06, 1.62982 )
+
+[node name="tree_patch6" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.265472, 0, -0.964119, 0, 1, 0, 0.964119, 0, 0.265472, -24.6409, 3.8147e-06, -21.0912 )

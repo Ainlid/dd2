@@ -19,16 +19,18 @@ func _randomize_mats():
 		current_mat.albedo_texture = globals.textures[tex_id]
 		current_mat.uv1_offset.x = globals.dream_rng.randf_range(0.0, 1.0)
 		current_mat.uv1_offset.y = globals.dream_rng.randf_range(0.0, 1.0)
-		current_mat.uv1_scale.x = globals.dream_rng.randf_range(0.1, 2.0)
-		current_mat.uv1_scale.y = globals.dream_rng.randf_range(0.1, 2.0)
+		current_mat.uv1_scale.x = globals.dream_rng.randf_range(0.1, 1.0)
+		current_mat.uv1_scale.y = globals.dream_rng.randf_range(0.1, 1.0)
 
 func _set_env():
 	var env = world_env.environment
-	var fog_color = Color.from_hsv(globals.dream_rng.randf(), globals.dream_rng.randf_range(0.0, 0.7), globals.dream_rng.randf_range(0.2, 0.8))
-	env.background_color = fog_color
-	env.fog_color = fog_color
-	env.ambient_light_color = fog_color
-	env.ambient_light_energy = 0.5
+	var bg_hue = globals.dream_rng.randf()
+	var bg_sat = globals.dream_rng.randf_range(0.0, 0.7)
+	var bg_col = Color.from_hsv(bg_hue, bg_sat, globals.dream_rng.randf_range(0.0, 0.6))
+	var amb_col = Color.from_hsv(bg_hue, bg_sat, 0.5)
+	env.background_color = bg_col
+	env.fog_color = bg_col
+	env.ambient_light_color = amb_col
 
 func _set_sun():
 	sun.rotation.x = globals.dream_rng.randf_range(-PI / 2.0, 0.0)
