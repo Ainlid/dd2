@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/tree_patch.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/cube_solid.tscn" type="PackedScene" id=2]
@@ -6,7 +6,8 @@
 [ext_resource path="res://spawners/player_spawner/spawnpoint.tscn" type="PackedScene" id=4]
 [ext_resource path="res://materials/grass.tres" type="Material" id=5]
 [ext_resource path="res://assets/tree.tscn" type="PackedScene" id=6]
-[ext_resource path="res://link/link.tscn" type="PackedScene" id=7]
+[ext_resource path="res://materials/trunk.tres" type="Material" id=7]
+[ext_resource path="res://assets/mountain.tscn" type="PackedScene" id=8]
 
 [node name="forest" type="Spatial"]
 
@@ -25,6 +26,30 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.68346, 6.76759, -7.98211 )
 [node name="ground" parent="." instance=ExtResource( 2 )]
 transform = Transform( 50, 0, 0, 0, 1, 0, 0, 0, 50, 0, -1, 0 )
 material/0 = ExtResource( 5 )
+
+[node name="wall" parent="." instance=ExtResource( 2 )]
+transform = Transform( 26.4668, 0, 4.70827, 0, 5, 0, -14.1248, 0, 8.82226, 33.8852, 2.22218, 46.8051 )
+material/0 = ExtResource( 7 )
+
+[node name="wall2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 36.8357, 0, -3.89815, 0, 6, 0, 15.5926, 0, 9.20893, -24.8024, 2.22218, 43.4732 )
+material/0 = ExtResource( 7 )
+
+[node name="wall3" parent="." instance=ExtResource( 2 )]
+transform = Transform( -1.31853, 0, -9.99457, 0, 8, 0, 39.9783, 0, -0.329632, -48.5557, 6.92024, -11.3319 )
+material/0 = ExtResource( 7 )
+
+[node name="wall4" parent="." instance=ExtResource( 2 )]
+transform = Transform( -38.015, 0, -3.11108, 0, 6, 0, 12.4443, 0, -9.50375, -12.7298, 3.03311, -46.1407 )
+material/0 = ExtResource( 7 )
+
+[node name="wall5" parent="." instance=ExtResource( 2 )]
+transform = Transform( -21.9713, 0, 6.809, 0, 7, 0, -20.427, 0, -7.32377, 34.9978, 5.89298, -32.9758 )
+material/0 = ExtResource( 7 )
+
+[node name="wall6" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.263895, 0, 9.99961, 0, 6, 0, -29.9988, 0, -0.087965, 52.1966, 3.19386, 10.6671 )
+material/0 = ExtResource( 7 )
 
 [node name="tree_patch" parent="." instance=ExtResource( 1 )]
 
@@ -52,14 +77,5 @@ transform = Transform( 0.265472, 0, -0.964119, 0, 1, 0, 0.964119, 0, 0.265472, -
 [node name="tree" parent="." instance=ExtResource( 6 )]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -29.4933, 0, 23.788 )
 
-[node name="link" parent="." instance=ExtResource( 7 )]
-transform = Transform( 50, 0, 0, 0, 10, 0, 0, 0, 1, 0, 7.77038, -50.201 )
-
-[node name="link2" parent="." instance=ExtResource( 7 )]
-transform = Transform( 50, 0, 0, 0, 10, 0, 0, 0, 1, 0, 7.77038, 50.2472 )
-
-[node name="link3" parent="." instance=ExtResource( 7 )]
-transform = Transform( -2.18557e-06, 0, -1, 0, 10, 0, 50, 0, -4.37114e-08, 50.6544, 7.77, 0 )
-
-[node name="link4" parent="." instance=ExtResource( 7 )]
-transform = Transform( -2.18557e-06, 0, -1, 0, 10, 0, 50, 0, -4.37114e-08, -49.5438, 7.77, 0 )
+[node name="mountain" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 63.8528, 8.04206, -15.8311 )
