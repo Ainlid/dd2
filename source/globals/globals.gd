@@ -28,7 +28,8 @@ preload("res://materials/rubber.tres"),
 preload("res://materials/trunk.tres"),
 preload("res://materials/grass.tres"),
 preload("res://materials/stone.tres"),
-preload("res://materials/fabric.tres")]
+preload("res://materials/fabric.tres"),
+preload("res://materials/dirt.tres")]
 
 const textures = [preload("res://textures/blue1.png"),
 preload("res://textures/blue2.png"),
