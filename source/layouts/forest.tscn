@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/tree_patch.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/cube_solid.tscn" type="PackedScene" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://assets/tree.tscn" type="PackedScene" id=6]
 [ext_resource path="res://materials/trunk.tres" type="Material" id=7]
 [ext_resource path="res://assets/mountain.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/tent.tscn" type="PackedScene" id=9]
+[ext_resource path="res://link/link.tscn" type="PackedScene" id=10]
 
 [node name="forest" type="Spatial"]
 
@@ -18,7 +20,7 @@ points = [ NodePath("spawnpoint"), NodePath("spawnpoint2"), NodePath("spawnpoint
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10632, 0 )
 
 [node name="spawnpoint2" parent="player_spawner" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.59608, 1.02534, 8.11168 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9686, 1.02534, 17.7953 )
 
 [node name="spawnpoint3" parent="player_spawner" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.68346, 6.76759, -7.98211 )
@@ -79,3 +81,17 @@ transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -29.4933, 0, 23.788 )
 
 [node name="mountain" parent="." instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 63.8528, 8.04206, -15.8311 )
+
+[node name="fallen_tree" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.18854, -1.75718, -0.0307467, 0, 0.174312, -0.398478, 0.352778, 0.939114, 0.0164324, -7.21341, 0.178753, -14.6325 )
+material/0 = ExtResource( 7 )
+
+[node name="fallen_tree2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.154667, -2.17426, -0.122705, -0.284804, -0.175312, -0.279464, 0.234446, 1.22142, -0.258541, -11.6559, 0.249976, -11.7135 )
+material/0 = ExtResource( 7 )
+
+[node name="tent" parent="." instance=ExtResource( 9 )]
+transform = Transform( 0.936201, 0, 0.351466, 0, 1, 0, -0.351466, 0, 0.936201, 13.9317, 0, 15.5762 )
+
+[node name="link" parent="tent" instance=ExtResource( 10 )]
+transform = Transform( 2.5, 0, 0, 0, 2, 0, 0, 0, 2.5, 0, 2.01871, 0 )

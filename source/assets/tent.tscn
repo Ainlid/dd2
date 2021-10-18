@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/cube_solid.tscn" type="PackedScene" id=1]
+[ext_resource path="res://materials/fabric.tres" type="Material" id=2]
+
+[sub_resource type="CubeMesh" id=1]
+
+[node name="tent" type="Spatial"]
+
+[node name="cube_solid" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 1.2, 0, 0, 0, 2, 0, 1.2, 0 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 2 )
+
+[node name="cube_solid2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1.5, 0, 0, 0, 0.5, 0, 0, 0, 1.5, 0, 2.9, 0 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 2 )
+
+[node name="cube_solid3" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.83521, 0.5, 1.83319 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 2 )
+
+[node name="cube_solid4" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.92695, 0.5, -1.96497 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 2 )
+
+[node name="cube_solid5" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.92181, 0.5, -1.91394 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 2 )
+
+[node name="cube_solid6" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.93436, 0.5, 1.95397 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 2 )
