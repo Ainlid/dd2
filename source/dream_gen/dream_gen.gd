@@ -19,8 +19,8 @@ func _randomize_mats():
 		current_mat.albedo_texture = globals.textures[tex_id]
 		current_mat.uv1_offset.x = globals.dream_rng.randf_range(0.0, 1.0)
 		current_mat.uv1_offset.y = globals.dream_rng.randf_range(0.0, 1.0)
-		current_mat.uv1_scale.x = globals.dream_rng.randf_range(0.1, 2.0)
-		current_mat.uv1_scale.y = globals.dream_rng.randf_range(0.1, 2.0)
+		current_mat.uv1_scale.x = globals.dream_rng.randf_range(0.1, 0.5)
+		current_mat.uv1_scale.y = globals.dream_rng.randf_range(0.1, 0.5)
 
 func _set_env():
 	var env = world_env.environment
