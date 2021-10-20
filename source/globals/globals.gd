@@ -17,7 +17,8 @@ preload("res://loops/scary2.wav"),
 preload("res://loops/scary3.wav"),
 preload("res://loops/scary4.wav")]
 
-const layouts = [preload("res://layouts/forest.tscn")]
+const layouts = [preload("res://layouts/forest.tscn"),
+preload("res://layouts/street.tscn")]
 
 var materials = [preload("res://materials/brick.tres"),
 preload("res://materials/concrete.tres"),
@@ -29,7 +30,8 @@ preload("res://materials/trunk.tres"),
 preload("res://materials/grass.tres"),
 preload("res://materials/stone.tres"),
 preload("res://materials/fabric.tres"),
-preload("res://materials/dirt.tres")]
+preload("res://materials/dirt.tres"),
+preload("res://materials/asphalt.tres")]
 
 const textures = [preload("res://textures/blue1.png"),
 preload("res://textures/blue2.png"),

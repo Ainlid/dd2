@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/cube_solid.tscn" type="PackedScene" id=1]
+[ext_resource path="res://materials/metal.tres" type="Material" id=3]
+[ext_resource path="res://materials/rubber.tres" type="Material" id=4]
+[ext_resource path="res://materials/glass.tres" type="Material" id=5]
+
+[sub_resource type="CubeMesh" id=1]
+
+[node name="car" type="Spatial"]
+
+[node name="cube_solid" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1.2, 0, 0, 0, 0.5, 0, 0, 0, 2, 0, -0.1, 0 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 3 )
+
+[node name="cube_solid2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0.9, -0.689206 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 5 )
+
+[node name="cube_solid3" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.8, 0, 0, 0, 0.353553, -0.565685, 0, 0.353553, 0.565685, 0, 0.455972, 0.518966 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 5 )
+
+[node name="cube_solid4" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, 0, 0, 0, 0.282843, -0.282843, 0, 0.282843, 0.282843, -1.21256, -0.58032, 1.20693 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 4 )
+
+[node name="cube_solid5" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, 0, 0, 0, 0.242118, -0.318401, 0, 0.318401, 0.242118, -1.21256, -0.58032, -1.10775 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 4 )
+
+[node name="cube_solid6" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, 0, 0, 0, 0.300432, -0.264085, 0, 0.264085, 0.300432, 1.22618, -0.58032, -1.10775 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 4 )
+
+[node name="cube_solid7" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, 0, 0, 0, 0.199316, -0.346804, 0, 0.346804, 0.199316, 1.22618, -0.58032, 1.11921 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 4 )
