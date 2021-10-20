@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/cube_solid.tscn" type="PackedScene" id=1]
+[ext_resource path="res://materials/metal.tres" type="Material" id=2]
+
+[sub_resource type="CubeMesh" id=1]
+
+[node name="crane" type="Spatial"]
+
+[node name="cube_solid" type="MeshInstance" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1.5, 0, 0, 0, 20, 0, 0, 0, 1.5, 0, 20, 0 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 2 )
+
+[node name="cube_solid2" type="MeshInstance" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 3, 0, 0, 0, 4, 0, 35.2496, 0 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 2 )
+
+[node name="cube_solid3" type="MeshInstance" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 5, 0, 34.1209, 8.85772 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 2 )
+
+[node name="cube_solid4" type="MeshInstance" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 5, 0, 33.7434, 18.7239 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 2 )

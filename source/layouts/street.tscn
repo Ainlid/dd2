@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://spawners/player_spawner/player_spawner.tscn" type="PackedScene" id=1]
 [ext_resource path="res://spawners/player_spawner/spawnpoint.tscn" type="PackedScene" id=2]
@@ -10,6 +10,9 @@
 [ext_resource path="res://assets/house.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assets/house_angle.tscn" type="PackedScene" id=9]
 [ext_resource path="res://link/link.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/trash_can.tscn" type="PackedScene" id=11]
+[ext_resource path="res://assets/crane.tscn" type="PackedScene" id=12]
+[ext_resource path="res://assets/unfinished_house.tscn" type="PackedScene" id=13]
 
 [node name="street" type="Spatial"]
 
@@ -20,10 +23,10 @@ points = [ NodePath("spawnpoint"), NodePath("spawnpoint2"), NodePath("spawnpoint
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 
 [node name="spawnpoint2" parent="player_spawner" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 3 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 45.0124, 1, -26.377 )
 
 [node name="spawnpoint3" parent="player_spawner" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 14 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -55.4915, 1, 31.4593 )
 
 [node name="ground" parent="." instance=ExtResource( 3 )]
 transform = Transform( 80, 0, 0, 0, 1, 0, 0, 0, 80, 0, -1, 0 )
@@ -116,3 +119,15 @@ transform = Transform( 1.2, 0, 0, 0, 1.5, 0, 0, 0, 1, 12.8556, 1.52969, -15.039 
 
 [node name="link7" parent="." instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1.5, 0, 0, 0, 1.2, -41.919, 1.52969, -4.66754 )
+
+[node name="crane" parent="." instance=ExtResource( 12 )]
+transform = Transform( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -41.6348, 0, -68.1911 )
+
+[node name="unfinished_house" parent="." instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -58.009, 0, -51.2597 )
+
+[node name="trash_can" parent="." instance=ExtResource( 11 )]
+transform = Transform( -0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, 70.3446, 0, -22.9276 )
+
+[node name="trash_can2" parent="." instance=ExtResource( 11 )]
+transform = Transform( -1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, -1, 70.5683, 0, -28.4782 )
