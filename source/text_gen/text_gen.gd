@@ -1,51 +1,15 @@
 extends Node
 
-const articles = ["the", "the", "the", "the", "my", "your", "our", "that", "this", "every", "one", "the only", "his", "her"]
-
-const nouns = ["forest", "city", "place", "plant", "sky", "ground", "mountain", "vehicle", "computer", "man", "woman", "person", "animal", "road", "device", "software", "family", "school", "bed", "mouse", "keyboard", "bicycle", "drink", "outfit", "decoration", "wall", "airport", "bridge", "road", "river", "beach", "sculpture", "instrument", "fruit", "window", "computer", "piece of paper", "photo", "artwork", "space", "task", "goal", "project", "lighthouse", "ocean", "planet"]
-
-const prepositions = ["under", "in front of", "on top of", "above", "behind", "near", "following", "inside", "outside", "besides", "unlike", "like", "beneath", "against", "into", "beyond", "considering", "without", "with", "towards"]
-
-const verbs = ["is", "was", "will be", "might be", "was never", "moves", "moved", "will move", "plays", "responded", "thinks", "is thinking", "waited", "waits", "enjoys", "hates", "illuminates", "faded", "transformed", "knows", "is working", "is calling", "stops", "continues", "speaks", "was speaking", "won", "lost", "is building", "destroyed", "is considering"]
-
-const adjectives = ["happy", "sad", "moving", "static", "fast", "slow", "unbelievable", "infinte", "surprising", "mysterious", "glowing", "tired", "hard", "soft", "transparent", "long", "short", "excellent", "noisy", "silent", "rare", "common", "normal", "typical", "living", "clean", "dirty", "fancy", "scary", "helpless", "uncanny", "melodic", "silly", "kind", "brave", "nice", "old", "modern", "young", "sweet", "wet", "dry", "cold", "hot", "heavy", "industrial", "complex", "accurate", "awesome", "shiny", "cool", "fake", "unreal", "intelligent", "smart", "curious", "strange", "unique", "empty", "desaturated", "saturated", "blurry", "sharp", "warped"]
-
-const punctuation = [".", ".", ".", "...", "!", "?"]
+const sample = "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stal"
 
 func _ready():
-	print(_make_sentence())
+	print(_make_text(3, 20))
 
-func _rand_art():
-	var id = globals.dream_rng.randi()%articles.size()
-	return articles[id]
-
-func _rand_noun():
-	var id = globals.dream_rng.randi()%nouns.size()
-	return nouns[id]
-
-func _rand_prep():
-	var id = globals.dream_rng.randi()%prepositions.size()
-	return prepositions[id]
-
-func _rand_verb():
-	var id = globals.dream_rng.randi()%verbs.size()
-	return verbs[id]
-
-func _rand_adj():
-	var id = globals.dream_rng.randi()%adjectives.size()
-	return adjectives[id]
-
-func _rand_punct():
-	var id = globals.dream_rng.randi()%punctuation.size()
-	return punctuation[id]
-
-func _make_sentence():
-	var sentence = ""
-	sentence += _rand_art() + " "
-	if globals.dream_rng.randf() > 0.5:
-		sentence += _rand_adj() + " "
-	sentence +=  _rand_noun() + " " + _rand_verb() + " " + _rand_prep() + " " + _rand_art() + " "
-	if globals.dream_rng.randf() > 0.5:
-		sentence += _rand_adj() + " "
-	sentence +=  _rand_noun() + _rand_punct()
-	return sentence
+func _make_text(parts_amount, max_length):
+	var text = ""
+	for n in parts_amount:
+		var start_point = globals.dream_rng.randi()%(sample.length() - 1)
+		var remaining_length = sample.length() - start_point
+		var text_length = min(globals.dream_rng.randi()%max_length, sample.length() - remaining_length)
+		text += sample.substr(start_point, text_length)
+	return text
