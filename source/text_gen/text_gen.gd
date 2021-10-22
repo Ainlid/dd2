@@ -2,17 +2,17 @@ extends Node
 
 const articles = ["the", "the", "the", "the", "my", "your", "our", "that", "this", "every", "one", "the only", "his", "her"]
 
-const nouns = ["forest", "city", "place", "plant", "sky", "ground", "mountain", "vehicle", "computer", "man", "woman", "person", "animal", "road", "device", "software", "family", "school", "bed", "mouse", "keyboard", "bicycle", "drink", "outfit", "decoration", "wall", "airport", "bridge", "road", "river", "beach", "sculpture", "instrument", "fruit", "window", "computer", "piece of paper", "photo", "artwork", "space", "task", "goal", "project", "lighthouse", "ocean", "planet", "game", "simulation"]
+const nouns = ["forest", "city", "place", "plant", "sky", "ground", "mountain", "vehicle", "computer", "man", "woman", "person", "character", "animal", "road", "device", "software", "family", "school", "bed", "mouse", "keyboard", "bicycle", "drink", "outfit", "decoration", "wall", "airport", "bridge", "road", "river", "beach", "sculpture", "instrument", "fruit", "window", "computer", "piece of paper", "photo", "artwork", "space", "task", "goal", "project", "lighthouse", "ocean", "planet", "game", "simulation", "time", "moment", "memory"]
 
-const verbs = ["moves", "moved", "will move", "plays", "responded", "thinks", "is thinking", "waited", "waits", "enjoys", "hates", "illuminates", "faded", "transformed", "knows", "is working", "is calling", "stops", "continues", "speaks", "was speaking", "won", "lost", "is building", "destroyed", "is considering"]
+const verbs = ["moves", "moved", "will move", "plays", "responded", "thinks", "is thinking", "waited", "waits", "enjoys", "dislikes", "illuminates", "faded", "transformed", "knows", "works", "calls", "stops", "continues", "speaks", "was speaking", "won", "lost", "creates", "destroyed", "remembered", "forgot", "writes", "allows", "forbids", "opens", "closes", "died", "lives"]
 
 const verbs_copular = ["is", "was", "will be", "might be", "looks", "must be", "remains"]
 
-const adjectives = ["happy", "sad", "moving", "static", "fast", "slow", "unbelievable", "infinte", "surprising", "mysterious", "glowing", "tired", "hard", "soft", "transparent", "long", "short", "excellent", "noisy", "silent", "rare", "common", "normal", "typical", "living", "clean", "dirty", "fancy", "scary", "helpless", "uncanny", "melodic", "silly", "kind", "brave", "nice", "old", "modern", "young", "sweet", "wet", "dry", "cold", "hot", "heavy", "industrial", "complex", "accurate", "awesome", "shiny", "cool", "fake", "unreal", "intelligent", "smart", "curious", "strange", "unique", "empty", "desaturated", "saturated", "blurry", "sharp", "warped"]
+const adjectives = ["happy", "sad", "moving", "static", "fast", "slow", "unbelievable", "infinte", "surprising", "mysterious", "glowing", "tired", "hard", "soft", "transparent", "long", "short", "excellent", "noisy", "quiet", "rare", "common", "normal", "typical", "living", "clean", "dirty", "fancy", "scary", "helpless", "uncanny", "melodic", "silly", "kind", "brave", "nice", "old", "modern", "young", "sweet", "wet", "dry", "cold", "hot", "heavy", "industrial", "complex", "accurate", "awesome", "shiny", "cool", "fake", "unreal", "intelligent", "smart", "curious", "strange", "unique", "empty", "desaturated", "saturated", "blurry", "sharp", "warped"]
 
 const adverbs = ["accidentally", "actually", "always", "regularly", "rarely", "never", "anxiously", "arrogantly", "awkwardly", "beautifully", "bravely", "quickly", "slowly", "carefully", "sadly", "gladly", "exactly", "orderly", "randomly", "oddly", "hardly", "easily", "before", "later", "soon", "still", "eventually", "recently", "finally"]
 
-const punctuation = [".", ".", ".", "...", "!", "?", "!?", "--"]
+const punctuation = [".", ".", ".", ".", "...", "!", "?", "!?", "--"]
 
 func _rand_part(part_array):
 	var id = globals.dream_rng.randi()%part_array.size()
