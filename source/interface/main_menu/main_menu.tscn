@@ -1,13 +1,12 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://interface/controls/controls.tscn" type="PackedScene" id=1]
 [ext_resource path="res://interface/styles/label.tres" type="StyleBox" id=2]
-[ext_resource path="res://interface/main_menu/play_button.gd" type="Script" id=3]
 [ext_resource path="res://interface/main_menu/quit_button.gd" type="Script" id=4]
 [ext_resource path="res://interface/fonts/font_regular.tres" type="DynamicFont" id=5]
 [ext_resource path="res://interface/fonts/font_title.tres" type="DynamicFont" id=6]
 [ext_resource path="res://interface/settings/settings.tscn" type="PackedScene" id=7]
-[ext_resource path="res://interface/load_button/load_button.tscn" type="PackedScene" id=8]
+[ext_resource path="res://interface/main_menu/start_button.gd" type="Script" id=8]
 
 [node name="main_menu" type="Spatial"]
 
@@ -42,30 +41,23 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="play_button" type="Button" parent="."]
-margin_left = 138.0
-margin_top = 334.0
-margin_right = 448.0
-margin_bottom = 394.0
-mouse_default_cursor_shape = 2
+[node name="start_button" type="Button" parent="."]
+margin_left = 141.0
+margin_top = 336.0
+margin_right = 449.0
+margin_bottom = 402.0
 custom_fonts/font = ExtResource( 5 )
-text = "play"
-script = ExtResource( 3 )
+text = "start"
+script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="load_button" parent="." instance=ExtResource( 8 )]
-margin_left = 138.0
-margin_top = 436.0
-margin_right = 446.0
-margin_bottom = 502.0
-
 [node name="quit_button" type="Button" parent="."]
-margin_left = 138.0
-margin_top = 736.0
-margin_right = 446.0
-margin_bottom = 796.0
+margin_left = 141.0
+margin_top = 636.0
+margin_right = 449.0
+margin_bottom = 696.0
 mouse_default_cursor_shape = 2
 custom_fonts/font = ExtResource( 5 )
 text = "quit"
@@ -79,17 +71,15 @@ wait_time = 0.5
 one_shot = true
 
 [node name="controls" parent="." instance=ExtResource( 1 )]
-margin_left = 138.0
-margin_top = 540.0
-margin_right = 448.0
-margin_bottom = 606.0
+margin_left = 141.0
+margin_top = 440.0
+margin_right = 451.0
+margin_bottom = 506.0
 
 [node name="settings" parent="." instance=ExtResource( 7 )]
-margin_left = 138.0
-margin_top = 648.0
-margin_right = 446.0
-margin_bottom = 703.0
+margin_left = 141.0
+margin_top = 548.0
+margin_right = 449.0
+margin_bottom = 603.0
 
-[connection signal="pressed" from="play_button" to="play_button" method="_play_game"]
-[connection signal="pressed" from="quit_button" to="quit_button" method="_quit_pressed"]
 [connection signal="timeout" from="quit_button/timer" to="quit_button" method="_quit_game"]

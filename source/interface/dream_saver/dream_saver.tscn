@@ -24,12 +24,12 @@ __meta__ = {
 margin_right = 40.0
 margin_bottom = 14.0
 custom_fonts/font = ExtResource( 2 )
-text = "current dream address:"
+text = "current dream seed:"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="label_address" type="Label" parent="."]
+[node name="label_seed" type="Label" parent="."]
 margin_top = 66.0
 margin_right = 508.0
 margin_bottom = 112.0

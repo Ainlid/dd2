@@ -2,6 +2,7 @@ extends CanvasLayer
 
 var path = "test"
 const menu_path = "res://interface/main_menu/main_menu.tscn"
+const load_path = "res://interface/load_menu/load_menu.tscn"
 const dream_path = "res://dream/dream.tscn"
 
 var duration = 0.5

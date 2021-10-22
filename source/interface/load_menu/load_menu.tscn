@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://interface/load_menu/load_menu.gd" type="Script" id=1]
+[ext_resource path="res://interface/fonts/font_regular.tres" type="DynamicFont" id=2]
+[ext_resource path="res://string_gen/string_gen.tscn" type="PackedScene" id=3]
+
+[node name="load_menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="filedialog" type="FileDialog" parent="."]
+margin_right = 367.0
+margin_bottom = 318.0
+window_title = "open a file"
+mode = 0
+access = 2
+filters = PoolStringArray( "*.txt" )
+current_dir = "/Daniil/dd2/source"
+current_path = "/Daniil/dd2/source/"
+
+[node name="file_button" type="Button" parent="."]
+margin_left = 1340.0
+margin_top = 500.0
+margin_right = 1622.0
+margin_bottom = 580.0
+custom_fonts/font = ExtResource( 2 )
+text = "load from file"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="line_edit" type="LineEdit" parent="."]
+margin_left = 332.0
+margin_top = 500.0
+margin_right = 916.0
+margin_bottom = 578.0
+custom_fonts/font = ExtResource( 2 )
+text = "write a dream seed"
+max_length = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="line_confirm" type="Button" parent="."]
+margin_left = 960.0
+margin_top = 500.0
+margin_right = 1072.0
+margin_bottom = 578.0
+custom_fonts/font = ExtResource( 2 )
+text = "go"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="rand_button" type="Button" parent="."]
+margin_left = 1110.0
+margin_top = 500.0
+margin_right = 1292.0
+margin_bottom = 578.0
+custom_fonts/font = ExtResource( 2 )
+text = "random"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="string_gen" parent="." instance=ExtResource( 3 )]
+
+[connection signal="pressed" from="line_confirm" to="." method="_line_confirmed"]
+[connection signal="pressed" from="rand_button" to="." method="_rand_pressed"]
