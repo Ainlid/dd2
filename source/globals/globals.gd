@@ -33,7 +33,10 @@ preload("res://materials/stone.tres"),
 preload("res://materials/fabric.tres"),
 preload("res://materials/dirt.tres"),
 preload("res://materials/asphalt.tres"),
-preload("res://materials/paint.tres")]
+preload("res://materials/paint.tres"),
+preload("res://materials/skin.tres"),
+preload("res://materials/bone.tres"),
+preload("res://materials/energy.tres")]
 
 const textures = [preload("res://textures/black1.png"),
 preload("res://textures/black2.png"),
@@ -75,6 +78,11 @@ preload("res://textures/yellow1.png"),
 preload("res://textures/yellow2.png"),
 preload("res://textures/yellow3.png"),
 preload("res://textures/yellow4.png")]
+
+const npc_models = [preload("res://npc/models/human.tscn"),
+preload("res://npc/models/human_small.tscn"),
+preload("res://npc/models/skeleton.tscn"),
+preload("res://npc/models/ghost.tscn")]
 
 var dream_rng
 

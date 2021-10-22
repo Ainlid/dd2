@@ -14,9 +14,6 @@ const adverbs = ["accidentally", "actually", "always", "regularly", "rarely", "n
 
 const punctuation = [".", ".", ".", "...", "!", "?", "!?", "--"]
 
-func _ready():
-	print(_make_text(4))
-
 func _rand_part(part_array):
 	var id = globals.dream_rng.randi()%part_array.size()
 	return part_array[id]

@@ -1,7 +1,7 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://spawners/player_spawner/player_spawner.tscn" type="PackedScene" id=1]
-[ext_resource path="res://spawners/player_spawner/spawnpoint.tscn" type="PackedScene" id=2]
+[ext_resource path="res://player/player_spawner/player_spawner.tscn" type="PackedScene" id=1]
+[ext_resource path="res://player/player_spawner/spawnpoint.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/cube_solid.tscn" type="PackedScene" id=3]
 [ext_resource path="res://materials/asphalt.tres" type="Material" id=4]
 [ext_resource path="res://assets/car.tscn" type="PackedScene" id=5]
@@ -13,6 +13,7 @@
 [ext_resource path="res://assets/trash_can.tscn" type="PackedScene" id=11]
 [ext_resource path="res://assets/crane.tscn" type="PackedScene" id=12]
 [ext_resource path="res://assets/unfinished_house.tscn" type="PackedScene" id=13]
+[ext_resource path="res://npc/npc_spawner/npc_spawner.tscn" type="PackedScene" id=14]
 
 [node name="street" type="Spatial"]
 
@@ -131,3 +132,18 @@ transform = Transform( -0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926,
 
 [node name="trash_can2" parent="." instance=ExtResource( 11 )]
 transform = Transform( -1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, -1, 70.5683, 0, -28.4782 )
+
+[node name="npc_spawner" parent="." instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.18822, 0, 20.0077 )
+
+[node name="npc_spawner2" parent="." instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.212, 0, -5.24554 )
+
+[node name="npc_spawner3" parent="." instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -63.1659, 0, -23.6387 )
+
+[node name="npc_spawner4" parent="." instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 57.1037, 0, 69.2883 )
+
+[node name="npc_spawner5" parent="." instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.9338, 0, -21.9179 )

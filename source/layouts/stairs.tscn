@@ -1,7 +1,7 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://spawners/player_spawner/spawnpoint.tscn" type="PackedScene" id=1]
-[ext_resource path="res://spawners/player_spawner/player_spawner.tscn" type="PackedScene" id=2]
+[ext_resource path="res://player/player_spawner/spawnpoint.tscn" type="PackedScene" id=1]
+[ext_resource path="res://player/player_spawner/player_spawner.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/stair.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/cube_solid.tscn" type="PackedScene" id=4]
 [ext_resource path="res://materials/paint.tres" type="Material" id=5]
@@ -9,6 +9,7 @@
 [ext_resource path="res://materials/concrete.tres" type="Material" id=7]
 [ext_resource path="res://link/link.tscn" type="PackedScene" id=8]
 [ext_resource path="res://materials/metal.tres" type="Material" id=9]
+[ext_resource path="res://npc/npc_spawner/npc_spawner.tscn" type="PackedScene" id=10]
 
 [node name="stairs" type="Spatial"]
 
@@ -130,3 +131,6 @@ transform = Transform( -1.31134e-07, 0, 1, 0, 1.5, 0, -3, 0, -4.37114e-08, 7.322
 
 [node name="link9" parent="." instance=ExtResource( 8 )]
 transform = Transform( -1.31134e-07, 0, 1, 0, 1.5, 0, -3, 0, -4.37114e-08, 7.32256, 7.48001, 0.158176 )
+
+[node name="npc_spawner" parent="." instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2743, 5.15399, 1.68177 )
