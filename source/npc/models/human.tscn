@@ -14,7 +14,7 @@ mesh = SubResource( 1 )
 material/0 = ExtResource( 2 )
 
 [node name="cube_solid2" parent="." instance=ExtResource( 1 )]
-transform = Transform( 0.1, 0, 0, 0, 0.4, 0, 0, 0, 0.1, -0.159, 0.4, -0.0549291 )
+transform = Transform( 0.1, 0, 0, 0, 0.4, 0, 0, 0, 0.1, -0.159, 0.4, 0.0363881 )
 mesh = SubResource( 1 )
 material/0 = ExtResource( 2 )
 
@@ -24,7 +24,7 @@ mesh = SubResource( 1 )
 material/0 = ExtResource( 2 )
 
 [node name="cube_solid4" parent="." instance=ExtResource( 1 )]
-transform = Transform( 0.0866025, -0.2, 0, 0.05, 0.34641, 0, 0, 0, 0.1, 0.328154, 0.995984, -0.0549291 )
+transform = Transform( 0.0866025, -0.2, 0, 0.05, 0.34641, 0, 0, 0, 0.1, 0.328154, 0.995984, 0.0350018 )
 mesh = SubResource( 1 )
 material/0 = ExtResource( 2 )
 

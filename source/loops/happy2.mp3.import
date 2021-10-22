@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/happy2.mp3-58b9fc828aea2b95ce9a8095f924ec97.mp3str"
+
+[deps]
+
+source_file="res://loops/happy2.mp3"
+dest_files=[ "res://.import/happy2.mp3-58b9fc828aea2b95ce9a8095f924ec97.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

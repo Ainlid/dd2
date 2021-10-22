@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/chill2.mp3-aac056935d09c2acf2163b7d7b33af22.mp3str"
+
+[deps]
+
+source_file="res://loops/chill2.mp3"
+dest_files=[ "res://.import/chill2.mp3-aac056935d09c2acf2163b7d7b33af22.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
