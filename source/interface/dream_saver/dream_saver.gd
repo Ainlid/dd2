@@ -5,7 +5,7 @@ onready var save_dialog = $save_dialog
 var current_seed
 
 func _ready():
-	current_seed = str(globals.dream_rng.seed)
+	current_seed = globals.seed_string
 	label_address.text = current_seed
 
 func _pressed_copy():

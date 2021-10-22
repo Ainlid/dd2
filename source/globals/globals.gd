@@ -102,7 +102,26 @@ preload("res://npc/models/ghost.tscn")]
 
 var dream_rng
 
+var seed_string = "godot"
+
+var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+
 func _ready():
 	randomize()
 	dream_rng = RandomNumberGenerator.new()
-	dream_rng.randomize()
+	_randomize_rng()
+
+func _randomize_rng():
+	seed_string = _rand_string(20)
+	dream_rng.seed = hash(seed_string)
+
+func _reseed_rng(new_seed):
+	seed_string = new_seed
+	dream_rng.seed = hash(seed_string)
+
+func _rand_string(length):
+	var rand_string: String
+	var n_char = len(characters)
+	for i in range(length):
+		rand_string += characters[randi()%n_char]
+	return rand_string

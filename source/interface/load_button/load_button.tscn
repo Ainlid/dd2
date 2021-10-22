@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://interface/fonts/font_regular.tres" type="DynamicFont" id=1]
+[ext_resource path="res://interface/load_button/load_button.gd" type="Script" id=2]
+
+[node name="load_button" type="Button"]
+margin_left = 1.0
+margin_right = 309.0
+margin_bottom = 60.0
+custom_fonts/font = ExtResource( 1 )
+text = "load a dream"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="filedialog" type="FileDialog" parent="."]
+margin_right = 382.0
+margin_bottom = 292.0
+window_title = "open a file"
+mode = 0
+access = 2
+filters = PoolStringArray( "*.txt" )
+current_dir = "/Daniil/dd2/source"
+current_path = "/Daniil/dd2/source/"
+
+[connection signal="file_selected" from="filedialog" to="." method="_file_selected"]
