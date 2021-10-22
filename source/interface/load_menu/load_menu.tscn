@@ -15,7 +15,7 @@ __meta__ = {
 [node name="filedialog" type="FileDialog" parent="."]
 margin_right = 367.0
 margin_bottom = 318.0
-window_title = "open a file"
+window_title = "Open a File"
 mode = 0
 access = 2
 filters = PoolStringArray( "*.txt" )
@@ -69,5 +69,7 @@ __meta__ = {
 
 [node name="string_gen" parent="." instance=ExtResource( 3 )]
 
+[connection signal="file_selected" from="filedialog" to="." method="_file_selected"]
+[connection signal="pressed" from="file_button" to="." method="_load_pressed"]
 [connection signal="pressed" from="line_confirm" to="." method="_line_confirmed"]
 [connection signal="pressed" from="rand_button" to="." method="_rand_pressed"]
