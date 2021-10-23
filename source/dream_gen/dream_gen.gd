@@ -26,7 +26,12 @@ func _set_env():
 	var env = world_env.environment
 	var bg_hue = globals.dream_rng.randf()
 	var bg_sat = globals.dream_rng.randf_range(0.0, 0.7)
-	var bg_col = Color.from_hsv(bg_hue, bg_sat, globals.dream_rng.randf_range(0.0, 1.0))
+	var bg_val = 0.0
+	if globals.dream_rng.randf() > 0.5:
+		bg_val = globals.dream_rng.randf_range(0.7, 0.9)
+	else:
+		bg_val = globals.dream_rng.randf_range(0.1, 0.3)
+	var bg_col = Color.from_hsv(bg_hue, bg_sat, bg_val)
 	var amb_col = Color.from_hsv(bg_hue, bg_sat, 0.5)
 	env.background_color = bg_col
 	env.fog_color = bg_col
