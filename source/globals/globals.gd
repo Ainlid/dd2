@@ -38,7 +38,8 @@ preload("res://bgm_gen/samples/kalimba.wav")]
 
 const layouts = [preload("res://layouts/forest.tscn"),
 preload("res://layouts/street.tscn"),
-preload("res://layouts/stairs.tscn")]
+preload("res://layouts/stairs.tscn"),
+preload("res://layouts/bridge.tscn")]
 
 var materials = [preload("res://materials/brick.tres"),
 preload("res://materials/concrete.tres"),
@@ -55,7 +56,8 @@ preload("res://materials/asphalt.tres"),
 preload("res://materials/paint.tres"),
 preload("res://materials/skin.tres"),
 preload("res://materials/bone.tres"),
-preload("res://materials/energy.tres")]
+preload("res://materials/energy.tres"),
+preload("res://materials/water.tres")]
 
 const textures = [preload("res://textures/black1.png"),
 preload("res://textures/black2.png"),

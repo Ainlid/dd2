@@ -8,7 +8,12 @@
 [ext_resource path="res://interface/settings/settings.tscn" type="PackedScene" id=7]
 [ext_resource path="res://interface/main_menu/start_button.gd" type="Script" id=8]
 
-[node name="main_menu" type="Spatial"]
+[node name="main_menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="bgm" type="AudioStreamPlayer" parent="."]
 autoplay = true
